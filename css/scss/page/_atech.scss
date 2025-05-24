@@ -1,0 +1,244 @@
+/* atech
+------------------------------------------ */
+@use '../setting' as s;
+
+.atech {
+  background-color: s.$paleblue;
+  position: relative;
+  z-index: 0; //.inner-itemとtriangle-animationのz-indexの基準とする
+
+  .section-title {
+    & .font-l {
+      font-size: 2.125rem;
+
+      //ブレイクポイント681px
+      @media (min-width: 681px) {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  &__inner {
+    padding-top: 2.5rem;
+    max-width: 420px;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+      max-width: 952px; //59.5rem
+    }
+  }
+}
+
+.inner-item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  justify-content: space-between;
+  z-index: 1; //.triangle-animation__itemとの重なり指定
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    column-gap: 2rem;
+  }
+
+  //奇数個目の要素は左右入れ替え
+  &:nth-child(odd) {
+    @media (min-width: 768px) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  //アンダーラインの前後の余白指定
+  &:nth-child(2) .text-underline__inner,
+  &:nth-child(3) .text-underline__inner {
+    display: inline-block;
+  }
+
+  &:nth-child(2) .text-underline__inner {
+    margin-right: .5rem;
+  }
+
+  &:nth-child(3) .text-underline__inner {
+    margin-left: .5rem;
+  }
+
+  &__top {
+    @media (min-width: 768px) {
+      flex: 1;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    display: flex;
+    column-gap: 1rem;
+    align-items: flex-start;
+  }
+
+  &__title-number {
+    color: s.$lightblue-underline;
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  &__title-text {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  &__text {
+    padding-top: 1rem;
+  }
+
+  &__bottom {
+    @media (min-width: 768px) {
+      flex: 1;
+    }
+  }
+
+  &__img {
+    border-radius: 2rem;
+    box-shadow: 12px 12px s.$lightblue-main;
+  }
+
+  +.inner-item {
+    padding-top: 2.5rem;
+  }
+}
+
+//回転する三角形 サイズ、配置
+.atech {
+  position: relative;
+
+  .triangle-animation {
+    &__p3-1 {
+      position: absolute;
+      top: 2.5rem;
+      right: 6%;
+      z-index: 0;
+
+      //ブレイクポイント681px
+      @media (min-width: 681px) {
+        top: 6.5rem;
+      }
+    }
+
+    &__p3-2 {
+      position: absolute;
+      top: 5.625rem; //90px
+      right: 3%;
+      z-index: 0;
+
+      @media (min-width: 681px) {
+        top: 10rem;
+      }
+    }
+
+    &__p3-3 {
+      position: absolute;
+      top: 8.75rem; //140px
+      right: 12%;
+      z-index: 0;
+
+      @media (min-width: 681px) {
+        top: 13rem;
+      }
+    }
+  }
+
+  .triangle-animation {
+    &__p4-1 {
+      position: absolute;
+      top: 46.25rem; //740px
+      right: 10%;
+      z-index: -1;
+
+      //768px以上
+      @media (min-width: 768px) {
+        top: 28rem;
+      }
+    }
+
+    &__p4-2 {
+      position: absolute;
+      top: 780px;
+      right: 8%;
+      z-index: -1;
+
+      //768px以上
+      @media (min-width: 768px) {
+        top: 30rem;
+      }
+    }
+  }
+
+  .triangle-animation {
+    &__p5-1 {
+      position: absolute;
+      top: 61.25rem; //980px
+      left: 14%;
+      z-index: -1; //.inner__itemとの重なり指定
+
+      @media (min-width: 768px) {
+        top: 57rem;
+        left: 8%;
+      }
+    }
+
+    &__p5-2 {
+      position: absolute;
+      top: 64rem; //1024px
+      left: 3%;
+      z-index: -1; //.inner__itemとの重なり指定
+
+      @media (min-width: 768px) {
+        top: 59rem; //944px
+        left: 2%;
+      }
+    }
+
+    &__p5-3 {
+      position: absolute;
+      top: 67.5rem; //1080px
+      left: 5%;
+      z-index: -1; //.inner__itemとの重なり指定
+
+      @media (min-width: 768px) {
+        top: 63rem;
+        left: 4%;
+      }
+    }
+
+    &__p6-1 {
+      position: absolute;
+      top: 75rem; //1200px
+      left: 0;
+      z-index: -1; //.inner__itemとの重なり指定
+
+      @media (min-width: 768px) {
+        top: 69.5rem;
+      }
+    }
+
+    &__p6-2 {
+      position: absolute;
+      top: 79.5rem; //1272px
+      left: 4%;
+      z-index: -1; //.inner__itemとの重なり指定
+
+      @media (min-width: 768px) {
+        top: 74rem;
+        left: 2%;
+      }
+    }
+  }
+}
+
+//フェードインアニメーションの開始時間遅延
+.atech {
+  .inner-item {
+    &:nth-child(2) {
+      animation-delay: 500ms;
+    }
+  }
+}
