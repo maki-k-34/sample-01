@@ -1,0 +1,98 @@
+/* footer
+------------------------------------------ */
+@use '../setting' as s;
+
+.footer {
+  background-color: s.$navy;
+
+  .container {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+
+    //681px以上
+    @media (min-width: 681px) {
+      padding-top: 1.5rem;
+      padding-bottom: .75rem;
+    }
+  }
+}
+
+.footer {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: .5rem;
+
+    //681px以上
+    @media (min-width: 681px) {
+      flex-direction: row;
+      column-gap: 1.5rem;
+    }
+  }
+
+  &__logo {
+    background-color: s.$white;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+  }
+
+  &__privacy-policy {
+    // background-color: pink;
+
+    //681px以上
+    @media (min-width: 681px) {
+      margin-left: auto;
+    }
+
+    &:hover {
+      opacity: .8;
+      transition: all .3s;
+    }
+  }
+
+  &__privacy-policy-link {
+    color: s.$white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.5rem;
+
+    //681px以上
+    @media (min-width: 681px) {
+      height: 3rem; //タッチエリア広く
+    }
+  }
+
+  &__sgate-link-button {
+    display: block;
+    background-color: s.$white;
+    width: 8rem; //128px
+    padding: .5rem 0;
+    text-align: center;
+    border-radius: 3rem;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+
+  &__sgate-link-img {
+    line-height: 0;
+  }
+}
+
+.footer {
+  &__copyright {
+    display: block;
+    font-size: .75rem;
+    color: s.$white;
+    text-align: center;
+    margin-top: 3rem;
+
+    //681px以上
+    @media (min-width: 681px) {
+      margin-top: 1rem;
+    }
+  }
+}

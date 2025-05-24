@@ -1,0 +1,252 @@
+/* header
+------------------------------------------ */
+@use '../setting' as s;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: s.$white-header;
+  z-index: 10;
+
+  &__logo {
+    line-height: 0;
+    margin-left: 1rem;
+  }
+
+  &__img {
+    max-width: 11.25rem;
+  }
+}
+
+//ハンバーガーボタン
+.header {
+  .hamburger-button {
+    position: relative;
+    z-index: 10; //ボタンをハンバーガーメニューより前面に
+    width: 6.25rem; //100px
+    height: 4.375rem; //70px
+    background-color: s.$lightblue-main;
+    border-bottom-left-radius: 1rem;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+
+    &__bar {
+      position: absolute; //.humburger-buttonを基準
+      display: inline-block;
+      transition: all .4s;
+      right: 1.75rem; //28px
+      background-color: s.$white;
+      border-radius: .5rem;
+      height: .312rem;
+
+      &--long {
+        top: 1.5rem; //24px
+        width: 2.75rem; //44px
+      }
+
+      &--short {
+        top: 2.5rem; //40px
+        width: 2.25rem; //36px
+      }
+    }
+
+    //ハンバーガーボタンをクリックすると×ボタンに変化  
+    &.active .hamburger-button__bar--long {
+      position: absolute;
+      top: 1.875rem; //30px
+      right: 1.875rem;
+      transform: rotate(45deg);
+      width: 2.75rem; //44px
+    }
+
+    &.active .hamburger-button__bar--short {
+      top: 1.875rem; //30px
+      right: 1.875rem;
+      transform: rotate(-45deg);
+      width: 2.75rem; //44px
+    }
+  }
+}
+
+// ハンバーガーメニュー
+//ハンバーガーメニュー展開時、背景を固定
+html.active {
+  height: 100%;
+  overflow: hidden;
+}
+
+.header {
+  .hamburger-menu {
+    @media (max-width: 1023.99px) {
+      position: fixed;
+      top: -120%; //上からスライドイン
+      left: 0;
+      width: 100%;
+      max-height: 90vh;
+      background-color: s.$lightblue-main;
+      border-bottom-left-radius: 3rem;
+      text-align: center;
+      transition: all .6s;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 9;
+    }
+
+    //スライドイン後の位置の指定
+    &.active {
+      top: 0;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &__nav {
+      @media (max-width: 1023.99px) {
+        padding-bottom: 2.75rem;
+        border-bottom: .125rem solid s.$white; //下線
+        margin: 6.5rem 1rem 0;
+      }
+    }
+
+    &__list-item {
+      +.hamburger-menu__list-item {
+        @media (max-width: 1023.99px) {
+          padding-top: 2rem;
+        }
+      }
+    }
+
+    &__button {
+      @media (max-width: 1023.99px) {
+        max-width: 19.5rem; //312px
+        margin: 2.75rem auto 0;
+      }
+    }
+
+    &__button-tag {
+      @media (max-width: 1023.99px) {
+        color: s.$white;
+        background-color: s.$navy;
+        border-radius: 4rem;
+        padding: .75rem 1rem;
+        margin-right: .75rem;
+      }
+    }
+
+    &__button-text {
+      @media (max-width: 1023.99px) {
+        color: s.$lightblue-main;
+      }
+    }
+
+    &__logo {
+      @media (max-width: 1023.99px) {
+        padding-top: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      @media (min-width: 1024px) {
+        display: none;
+      }
+    }
+
+    &__img {
+      @media (max-width: 1023.99px) {
+        max-width: 8.75rem; //140px
+      }
+    }
+
+    .list-item__link {
+      @media (max-width: 1023.99px) {
+        color: s.$white;
+        padding: 1rem 2rem; //タッチエリア
+      }
+    }
+
+    //ハンバーガーメニュー閉じているときは非表示開いた際に背景を暗く
+    &__bg {
+      display: none;
+    }
+  }
+
+  //ハンバーガーメニュー開いた際に背景を暗く
+  .hamburger-menu__bg.active {
+    @media (max-width: 1023.99px) {
+      display: block;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      letter-spacing: 0;
+      z-index: 8;
+      background-color: rgb(3 3 3 / 50%);
+    }
+  }
+}
+
+//ヘッダーメニュー
+.header {
+  .header-menu {
+    &__nav {
+      @media (min-width: 1024px) {
+        display: flex;
+        column-gap: 1.5rem;
+        align-items: center;
+        height: 100%;
+      }
+    }
+
+    &__list {
+      @media (min-width: 1024px) {
+        display: flex;
+        column-gap: 1.5rem;
+      }
+    }
+
+    .list-item__link {
+      @media (min-width: 1024px) {
+        color: s.$black;
+        padding: 1rem 0; //タッチエリア
+
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
+
+    &__button {
+      @media (min-width: 1024px) {
+        font-size: .875rem;
+        background-color: s.$lightblue-main;
+        height: 100%;
+        border-radius: 0 0 0 1.5rem;
+        padding: 2rem 1rem;
+
+        &:hover {
+          opacity: .8;
+        }
+      }
+    }
+
+    &__button-tag {
+      @media (min-width: 1024px) {
+        background-color: s.$white;
+        padding: .75rem 1rem;
+        border-radius: 1rem;
+        margin-right: .25rem;
+      }
+    }
+
+    &__button-text {
+      @media (min-width: 1024px) {
+        color: s.$white;
+      }
+    }
+  }
+}

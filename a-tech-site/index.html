@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A-TECH</title>
+  <meta name="description"
+    content="A-TECH(エーテック)は実務が経験できるオンラインプログラミングスクールです。現役エンジニアの講師とWEBディレクターによるサポートであなたを最短で”できる”エンジニアに育てます。">
+
+  <!-- OGP -->
+  <meta property="og:title" content="A-TECH">
+  <meta property="og:description"
+    content="A-TECH(エーテック)は実務が経験できるオンラインプログラミングスクールです。現役エンジニアの講師とWEBディレクターによるサポートであなたを最短で”できる”エンジニアに育てます。">
+  <!-- <meta property="og:site_name" content="サイト名"> -->
+  <!-- <meta property="og:url" content="ページのURL"> -->
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:type" content="website">
+
+  <!-- リセットCSS -->
+  <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+
+  <!-- Google Fonts -->
+  <!-- ※仮指定 Noto Sans Japanese -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- ファビコン-->
+  <link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+
+  <!-- style.css -->
+  <link href="css/style.css" rel="stylesheet">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+
+    <!-- ヘッダーロゴ -->
+    <h1 class="header__logo">
+      <a class="header__link" href="index.html">
+        <img class="header__img" src="images/svg/logo.svg" alt="A-TECH PROGRAMMING" width="180" height="38">
+      </a>
+    </h1>
+
+    <!-- ハンバーガーボタン -->
+    <button class="hamburger-button" type="button">
+      <span class="hamburger-button__bar hamburger-button__bar--long"></span>
+      <span class="hamburger-button__bar hamburger-button__bar--short"></span>
+    </button>
+
+    <!-- ハンバーガーメニュー、ヘッダーメニュー -->
+    <div class="hamburger-menu header-menu">
+
+      <nav class="hamburger-menu__nav header-menu__nav bold">
+        <!-- メニューリスト -->
+        <ul class="hamburger-menu__list header-menu__list">
+          <li class="hamburger-menu__list-item header-menu__list-item"><a class="list-item__link"
+              href="#atech">選ばれる理由</a></li>
+          <li class="hamburger-menu__list-item header-menu__list-item"><a class="list-item__link"
+              href="#curriculum">学習カリキュラム</a></li>
+          <li class="hamburger-menu__list-item header-menu__list-item"><a class="list-item__link"
+              href="#support">カリキュラムサポート</a></li>
+          <li class="hamburger-menu__list-item header-menu__list-item"><a class="list-item__link" href="#price">料金</a>
+          </li>
+        </ul>
+
+        <!-- ボタン -->
+        <a class="button hamburger-menu__button header-menu__button" href="#contact">
+          <span class="hamburger-menu__button-tag header-menu__button-tag">無料</span>
+          <span class="hamburger-menu__button-text header-menu__button-text">お問い合わせはこちら</span>
+        </a>
+      </nav>
+
+      <!-- ロゴ -->
+      <div class="hamburger-menu__logo">
+        <img class="hamburger-menu__img" src="images/svg/logo02.svg " alt="A-TECH PROGRAMMING" width="143" height="30">
+      </div>
+
+    </div>
+
+    <!-- ハンバーガーメニューを開いた際に背景を暗くするために使用 -->
+    <div class="hamburger-menu__bg"></div>
+
+  </header>
+
+  <main>
+    <!-- カバー -->
+    <section class="cover">
+
+      <!-- 回転する三角形 -->
+      <div class="triangle-animation triangle-animation__p1">
+        <img class="triangle-animation__item triangle-animation__p1-1 inview__load" src="images/svg/triangle.svg" alt=""
+          width="61" height="60">
+        <img class="triangle-animation__item triangle-animation__p1-2 inview__load" src="images/svg/triangle02.svg"
+          alt="" width="39" height="36">
+      </div>
+
+      <div class="triangle-animation triangle-animation__p2">
+        <img class="triangle-animation__item triangle-animation__p2-1 not-inview" src="images/svg/triangle.svg" alt=""
+          width="61" height="60">
+      </div>
+
+
+      <!-- テキスト -->
+      <div class="cover__text">
+        <p class="cover__box">
+          <span class="cover__box-row">未経験からエンジニアを目指したい</span>
+          <span class="cover__box-row">稼ぎたい</span>
+          <span class="cover__box-row">時間に縛られず自由に働きたい</span>
+          <span class="cover__box-row">安定した職種に就きたい</span>
+        </p>
+
+        <h2 class="cover__title animate__animated fadeinup__load">
+          <span class="cover__title-row cover__title-row--font-s">実践的な<br class="br-sp768">プログラミングスクール</span>
+          <span class="cover__title-row cover__title-row--font-l">現場で即戦力になる</span>
+          <span class="cover__title-row cover__title-row--font-m">エンジニアへ</span>
+        </h2>
+
+        <ul class="cover__list bold">
+          <li class="cover__list-item animate__animated fadeinup__load   quick">受注から納品<br>までの流れが<br>わかる</li>
+          <li class="cover__list-item animate__animated fadeinup__load quick">プロとして抑える<br>ポイントが<br>わかる</li>
+          <li class="cover__list-item animate__animated fadeinup__load   quick">タイム<br>マネジメントが<br>身に付く</li>
+        </ul>
+
+      </div>
+
+      <!-- カバー画像 -->
+      <div class="cover__img">
+        <img class="cover__img-item" src="images/mainview_img.jpg" alt="女性がパソコンの前で笑顔で話しているイメージ画像です" width="5116"
+          height="2841">
+      </div>
+    </section>
+
+
+    <!-- 今、エンジニア職につく4つの理由 -->
+    <section id="point" class="point">
+      <div class="container">
+
+        <h2 class="point__title animate__animated fadeinup__scroll">今、エンジニア職につく<br class="br-sp681"><span
+            class="font-l">4</span>つの理由</h2>
+
+        <div class="point__lead animate__animated fadeinup__scroll">
+          <p class="point__text">エンジニアは、今や私たちの生活になくてはならない多くのサービスを提供する職種です。</p>
+          <p class="point__text">ITエンジニアの将来性と需要はますます高まっており、高度なスキルを駆使して活躍できるキャリアパスを実現することで安定して高収入が見込めます。</p>
+        </div>
+
+        <ul class="point__list">
+
+          <li class="point__list-item animate__animated fadeinup__scroll quick">
+            <p class="point__list-text">年収が高い</p>
+            <div class="point__list-img">
+              <img class="point__img-item" src="images/point_img01.png" alt="" width="285" height="260">
+            </div>
+          </li>
+
+          <li class="point__list-item animate__animated fadeinup__scroll quick">
+            <p class="point__list-text">人材不足から<br>就職に有利</p>
+            <div class="point__list-img">
+              <img class="point__img-item" src="images/point_img02.png" alt="" width="262" height="243">
+            </div>
+          </li>
+
+          <li class="point__list-item animate__animated fadeinup__scroll quick">
+            <p class="point__list-text">フリーランスで<br>自由に働ける</p>
+            <div class="point__list-img">
+              <img class="point__img-item" src="images/point_img03.png" alt="" width="221" height="220">
+            </div>
+          </li>
+
+          <li class="point__list-item animate__animated fadeinup__scroll quick">
+            <p class="point__list-text">需要が高く<br>働き口が多い</p>
+            <div class="point__list-img">
+              <img class="point__img-item" src="images/point_img04.png" alt="" width="242" height="255">
+            </div>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+
+    <!-- A-TECHが選ばれる理由 -->
+    <section id="atech" class="atech triangle">
+      <div class="container">
+
+        <!-- 回転する三角形 -->
+        <div class="triangle-animation triangle-animation__p3">
+          <img class="triangle-animation__item triangle-animation__p3-1 inview__scroll" src="images/svg/triangle.svg"
+            alt="" width="61" height="60">
+          <img class="triangle-animation__item triangle-animation__p3-2 inview__scroll" src="images/svg/triangle02.svg"
+            alt="" width="39" height="36">
+          <img class="triangle-animation__item triangle-animation__p3-3 inview__scroll" src="images/svg/triangle.svg"
+            alt="" width="61" height="60">
+        </div>
+
+        <div class="triangle-animation triangle-animation__p4">
+          <img class="triangle-animation__item triangle-animation__p4-1 inview__scroll" src="images/svg/triangle.svg"
+            alt="" width="61" height="60">
+          <img class="triangle-animation__item triangle-animation__p4-2 inview__scroll" src="images/svg/triangle02.svg"
+            alt="" width="39" height="36">
+        </div>
+
+        <div class="triangle-animation triangle-animation__p5">
+          <img class="triangle-animation__item triangle-animation__p5-1 inview__scroll" src="images/svg/triangle02.svg"
+            alt="" width="39" height="36">
+          <img class="triangle-animation__item triangle-animation__p5-2 inview__scroll" src="images/svg/triangle.svg"
+            alt="" width="61" height="60">
+          <img class="triangle-animation__item triangle-animation__p5-3 inview__scroll" src="images/svg/triangle.svg"
+            alt="" width="61" height="60">
+        </div>
+
+        <div class="triangle-animation triangle-animation__p6">
+          <img class="triangle-animation__item triangle-animation__p6-1 inview__scroll" src="images/svg/triangle.svg"
+            alt="" width="61" height="60">
+          <img class="triangle-animation__item triangle-animation__p6-2 inview__scroll" src="images/svg/triangle02.svg"
+            alt="" width="39" height="36">
+        </div>
+
+        <!-- セクションタイトル -->
+        <h2 class="section-title text-underline animate__animated fadeinup__scroll">
+          <span>A-TECHが</span><br><span class="text-underline__inner"><span class="font-l">選</span>ばれる<span
+              class="font-l">理由</span></span>
+        </h2>
+
+        <div class="atech__inner">
+
+          <!-- 1 -->
+          <div class="inner-item animate__animated fadeinup__scroll">
+
+            <div class="inner-item__top">
+              <h3 class="inner-item__title">
+
+                <span class="inner-item__title-number">1</span>
+
+                <span class="inner-item__title-text text-underline">
+                  <span class="text-underline__inner">現場で即戦力になれる</span><br><span>カリキュラム構成</span>
+                </span>
+              </h3>
+
+              <p class="inner-item__text">
+                プログラミングスキルは基本的には自習でやってもらい、3:7の割合でビジネスにおける学習の比重を大きくしています。実践での経験を積むカリキュラムが多くすることで、スクール卒業後、即戦力になれる人材を育成します。
+              </p>
+            </div>
+
+            <div class="inner-item__bottom">
+              <img class="inner-item__img" src="images/media_img01.webp" alt="3台のディスプレイの前でプログラミングをする男性のイメージ画像です"
+                width="4896" height="3264">
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="inner-item animate__animated fadeinup__scroll">
+
+            <div class="inner-item__top">
+              <h3 class="inner-item__title">
+
+                <span class="inner-item__title-number">2</span>
+
+                <span class="inner-item__title-text text-underline">
+                  <span class="text-underline__inner">初心者も挫折せず</span><span>成果を出す</span><br><span>カリキュラムサポート</span>
+                </span>
+              </h3>
+
+              <p class="inner-item__text">
+                実践経験を積んでいる講師と勉強や現場へ即戦力になるためにアドバイスをする専属コンサルタントの2名のサポート体制を無料で提供しています。<br>そのほかにも週1で面談をし、受講生一人ひとりの学習スピードも考慮してスケジュール組みの提案など行なっていきます。
+              </p>
+            </div>
+
+            <div class="inner-item__bottom">
+              <img class="inner-item__img" src="images/media_img02.webp" alt="パソコン画面や資料を見ながら講師の指導を受ける生徒2名のイメージ画像です"
+                width="8640" height="5760">
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="inner-item animate__animated fadeinup__scroll">
+
+            <div class="inner-item__top">
+              <h3 class="inner-item__title">
+
+                <span class="inner-item__title-number">3</span>
+
+                <span class="inner-item__title-text text-underline">
+                  <span>プログラミングを学んだ後<br>も</span><span class="text-underline__inner">就職支援を受けられる</span>
+                </span>
+              </h3>
+
+              <p class="inner-item__text">
+                プログラミングを学んだ後も、受講生を放置にしません。A-TECHではスクール卒業後、グループ会社のアライアンス企業 創業29年最良人材会社ヒューマンヴォイスにご紹介します。
+                安心してエンジニアライフを送ることができます。
+              </p>
+            </div>
+
+            <div class="inner-item__bottom">
+              <img class="inner-item__img" src="images/media_img03.webp" alt="スーツを着ている男性のイメージ画像です" width="4896"
+                height="3264">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 学習カリキュラム -->
+    <section id="curriculum" class="curriculum">
+      <div class="container">
+
+        <!-- 回転する三角形 -->
+        <div class="triangle-animation triangle-animation__p3">
+          <img class="triangle-animation__item triangle-animation__p3-1 inview__scroll" src="images/svg/triangle.svg"
+            alt="" width="61" height="60">
+          <img class="triangle-animation__item triangle-animation__p3-2 inview__scroll" src="images/svg/triangle02.svg"
+            alt="" width="39" height="36">
+          <img class="triangle-animation__item triangle-animation__p3-3 inview__scroll" src="images/svg/triangle.svg"
+            alt="" width="61" height="60">
+        </div>
+
+        <div class="triangle-animation triangle-animation__p4">
+          <img class="triangle-animation__item triangle-animation__p4-1 inview__scroll" src="images/svg/triangle.svg"
+            alt="" width="61" height="60">
+          <img class="triangle-animation__item triangle-animation__p4-2 inview__scroll" src="images/svg/triangle02.svg"
+            alt="" width="39" height="36">
+        </div>
+
+        <!-- セクションタイトル -->
+        <h2 class="section-title animate__animated fadeinup__scroll">
+          <span class="text-underline"><span class="text-underline__inner">学習カリキュラム</span></span>
+        </h2>
+
+        <!-- 学べるスキル/実践スキル -->
+        <div class="curriculum__top">
+
+          <!-- 学べるスキル -->
+          <div class="curriculum__top-inner animate__animated fadeinup__scroll">
+            <h3 class="skill-list__title">学べるスキル</h3>
+            <ul class="skill-list__group bold">
+              <li class="skill-list__item ">HTML</li>
+              <li class="skill-list__item">CSS(SCSS)</li>
+              <li class="skill-list__item">JAVASCRIPT</li>
+              <li class="skill-list__item">jQuery</li>
+              <li class="skill-list__item">PHP</li>
+              <li class="skill-list__item">WORPRESS</li>
+              <li class="skill-list__item">JAVA</li>
+              <li class="skill-list__item">SQL</li>
+            </ul>
+            <p class="skill-list__note">※学べる言語はコースによって異なります。</p>
+          </div>
+
+          <!-- 実践スキル -->
+          <div class="curriculum__top-inner animate__animated fadeinup__scroll">
+            <h3 class="skill-list__title">実践スキル</h3>
+            <ul class="skill-list__group bold">
+              <li class="skill-list__item">SEO対策</li>
+              <li class="skill-list__item">CSS設計</li>
+              <li class="skill-list__item">納品完了までのチェック項目</li>
+              <li class="skill-list__item">タイムマネジメント</li>
+              <li class="skill-list__item">サーバー関係</li>
+              <li class="skill-list__item">デザインツールの使い方</li>
+              <li class="skill-list__item">Git,GitHub</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- スキル獲得までのステップ -->
+        <div class="curriculum__bottom animate__animated fadeinup__scroll">
+
+          <h3 class="step-list__title">スキル獲得までのステップ</h3>
+          <ul class="step-list__group">
+            <li class="step-list__item">
+              <p class="step-list__date"><span class="step-list__date-inner">1ヶ月目</span></p>
+              <p class="step-list__text">プログラミングの基礎を身につける</p>
+            </li>
+            <li class="step-list__item">
+              <p class="step-list__date"><span class="step-list__date-inner">2ヶ月目</span></p>
+              <p class="step-list__text">静的なページを作れるようになる</p>
+            </li>
+            <li class="step-list__item">
+              <p class="step-list__date"><span class="step-list__date-inner">3ヶ月目</span></p>
+              <p class="step-list__text">動的なページを作れるようになる</p>
+            </li>
+            <li class="step-list__item">
+              <p class="step-list__date"><span class="step-list__date-inner">4ヶ月目</span></p>
+              <p class="step-list__text">プログラミングの基礎を身につける</p>
+            </li>
+            <li class="step-list__item">
+              <p class="step-list__date"><span class="step-list__date-inner">5ヶ月目</span></p>
+              <p class="step-list__text">実務のノウハウを押さえる</p>
+            </li>
+            <li class="step-list__item">
+              <p class="step-list__date"><span class="step-list__date-inner">6ヶ月目</span></p>
+              <p class="step-list__text">実務体験</p>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 豊富なカリキュラムサポート -->
+    <section id="support" class="support">
+      <div class="container">
+
+        <!-- 回転する三角形 -->
+        <div class="triangle-animation triangle-animation__p3">
+          <img class="triangle-animation__item triangle-animation__p3-1 inview__scroll" src="images/svg/triangle.svg"
+            alt="" width="61" height="60">
+          <img class="triangle-animation__item triangle-animation__p3-2 inview__scroll" src="images/svg/triangle02.svg"
+            alt="" width="39" height="36">
+          <img class="triangle-animation__item triangle-animation__p3-3 inview__scroll" src="images/svg/triangle.svg"
+            alt="" width="61" height="60">
+        </div>
+
+        <div class="triangle-animation triangle-animation__p5">
+          <img class="triangle-animation__item triangle-animation__p5-1 inview__scroll" src="images/svg/triangle02.svg"
+            alt="" width="39" height="36">
+          <img class="triangle-animation__item triangle-animation__p5-2 inview__scroll" src="images/svg/triangle.svg"
+            alt="" width="61" height="60">
+          <img class="triangle-animation__item triangle-animation__p5-3 inview__scroll" src="images/svg/triangle.svg"
+            alt="" width="61" height="60">
+        </div>
+
+        <div class="triangle-animation triangle-animation__p6">
+          <img class="triangle-animation__item triangle-animation__p6-1 inview__scroll" src="images/svg/triangle.svg"
+            alt="" width="61" height="60">
+          <img class="triangle-animation__item triangle-animation__p6-2 inview__scroll" src="images/svg/triangle02.svg"
+            alt="" width="39" height="36">
+        </div>
+
+
+
+        <!-- セクションタイトル -->
+        <div class="section-title__outer animate__animated fadeinup__scroll">
+          <h2 class="section-title text-underline">
+            <span>豊富な</span><br class="br-sp681"><span class="text-underline__inner">カリキュラムサポート</span>
+            <span class="section-title__add">無料<br>オプション</span>
+          </h2>
+        </div>
+
+        <!-- リスト -->
+        <ul class="support__list">
+
+          <li class="support__list-item animate__animated fadeinup__scroll">
+            <div class="list-item__top">
+              <div class="list-item__img-outer">
+                <span class="list-item__number bold">1</span>
+                <img class="list-item__img" src="images/sprt_img01.png" alt="実務体験のイメージ画像です">
+              </div>
+            </div>
+
+            <div class="list-item__bottom">
+              <p class="list-item__title bold">実務体験</p>
+              <p class="list-item__text">当スクールのWEB開発事業部で実際に受けている案件を講師陣のサポートのもと遂行していただきます。</p>
+            </div>
+          </li>
+
+          <li class="support__list-item animate__animated fadeinup__scroll">
+            <div class="list-item__top">
+              <div class="list-item__img-outer">
+                <span class="list-item__number bold">2</span>
+                <img class="list-item__img" src="images/sprt_img02.png" alt="実務体験のイメージ画像です">
+              </div>
+            </div>
+
+            <div class="list-item__bottom">
+              <p class="list-item__title bold">お仕事での永久サポート</p>
+              <p class="list-item__text">卒業後でも仕事でわからないことがあればサポートいたします。</p>
+            </div>
+          </li>
+
+          <li class="support__list-item animate__animated fadeinup__scroll">
+            <div class="list-item__top">
+              <div class="list-item__img-outer">
+                <span class="list-item__number bold">3</span>
+                <img class="list-item__img" src="images/sprt_img03.png" alt="実務体験のイメージ画像です">
+              </div>
+            </div>
+
+            <div class="list-item__bottom">
+              <p class="list-item__title bold">週１回の面談</p>
+              <p class="list-item__text">専属コンサルタントが週一回面談を行い、授業では言えない悩みの解決や勉強方法などのアドバイスをします。</p>
+            </div>
+          </li>
+
+          <li class="support__list-item animate__animated fadeinup__scroll">
+            <div class="list-item__top">
+              <div class="list-item__img-outer">
+                <span class="list-item__number bold">4</span>
+                <img class="list-item__img" src="images/sprt_img04.png" alt="実務体験のイメージ画像です">
+              </div>
+            </div>
+
+            <div class="list-item__bottom">
+              <p class="list-item__title bold">コミュニティ招待</p>
+              <p class="list-item__text">同じ志を持った仲間と繋がれる、受講者限定のコミュニティにご招待します。</p>
+            </div>
+          </li>
+
+          <li class="support__list-item animate__animated fadeinup__scroll">
+            <div class="list-item__top">
+              <div class="list-item__img-outer">
+                <span class="list-item__number bold">5</span>
+                <img class="list-item__img" src="images/sprt_img05.png" alt="実務体験のイメージ画像です">
+              </div>
+            </div>
+
+            <div class="list-item__bottom">
+              <p class="list-item__title bold">マンツーマン授業</p>
+              <p class="list-item__text">ズームまたは対面で現役エンジニアと 月4回1.5時間の実務に特化したレッスン</p>
+            </div>
+          </li>
+
+          <li class="support__list-item animate__animated fadeinup__scroll">
+            <div class="list-item__top">
+              <div class="list-item__img-outer">
+                <span class="list-item__number bold">6</span>
+                <img class="list-item__img" src="images/sprt_img06.png" alt="実務体験のイメージ画像です">
+              </div>
+            </div>
+
+            <div class="list-item__bottom">
+              <p class="list-item__title bold">24時間質疑応答</p>
+              <p class="list-item__text">当スクールのWEB開発事業部で実際に受けている案件を講師陣のサポートのもと遂行していただきます。</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="support__box animate__animated fadeinup__scroll">
+          <h3 class="box-title">実践経験を積んでいる講師・カリキュラムサポートする専属コンサルタントの<br>2人体制で一人の受講生をサポート</h3>
+
+          <div class="box-inner">
+            <div class="comment">
+              <p class="comment__title bold">講師からのコメント</p>
+              <p class="comment__text">
+                レッスンでは、おひとりおひとりの伸びポイントやつまづきポイントをアドバイスしながら、生徒様のペースに合わせて、学習を進めていきます。<br>わかる所はスピーディーに、わかりにくいところは「何がわからないのか」という根本原因を一緒に考えながらじっくり進めましょう！<br>
+                「わからない」を「わかる」、「わかる」を「できる」に変えて自信をつけながら一緒に学習していきプロのエンジニアを目指しましょう！</p>
+            </div>
+
+            <div class="comment">
+              <p class="comment__title bold">専属コンサルタントからのコメント</p>
+              <p class="comment__text">
+                週に一回の面談で、幅広いお悩みにお答えいたします。<br>例えば「勉強方法の悩み」、「卒業後の働き方」、「実際の仕事の進め方」、「子育てや介護との両立」、「他では聞きづらいリアルなお金の話」等々、<br>どんなお悩みでもご相談ください！
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 料金 -->
+    <section id="price" class="price">
+      <div class="container">
+        <h2 class="section-title text-underline animate__animated fadeinup__scroll">
+          <span class="text-underline__inner"><span>料金</span></span>
+        </h2>
+
+        <div class="price__box bold animate__animated fadeinup__scroll">
+          <h3 class="price__title">WEB制作コース</h3>
+          <p class="price__text">
+            <span class="price__tag">一括・分割</span>
+            <span class="price__item">480,000円<span class="price__text-small">+税</span></span>
+          </p>
+        </div>
+
+        <div class="price__table animate__animated fadeinup__scroll">
+          <img class="price__img" src="images/price_img.png"
+            alt="料金比較表の画像です。A-TECHは料金(税抜):480,000円、授業体系:1on1、面談:あり、実務体験:あり、24時間チャット質問対応:ありとなっており、他スクールと比べ金額が安いことを示しています。"
+            width="2274" height="1161">
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 受講生の声 -->
+    <section id="voice" class="voice">
+      <div class="container">
+        <h2 class="section-title text-underline animate__animated fadeinup__scroll"><span
+            class="text-underline__inner">受講生の声</span></h2>
+
+        <div class="voice__list">
+          <div class="voice__item animate__animated fadeinup__scroll">
+            <img class="voice__img" src="images/voice_icon01.png" alt="">
+            <p class="voice__name">A.Wさん 大学生</p>
+            <p class="voice__text">初めは自己投資が不安だった のですが、すぐに仕事が入ってきて開始から2ヶ月目で お仕事を受けることができました！</p>
+          </div>
+
+          <div class="voice__item animate__animated fadeinup__scroll">
+            <img class="voice__img" src="images/voice_icon02.png" alt="">
+            <p class="voice__name">Y.Sさん 主婦</p>
+            <p class="voice__text">子供の面倒を見ながらだったので中々時間が取れなかったですが、講師陣の手厚いサポートのおかげで続けることができました！</p>
+          </div>
+
+          <div class="voice__item animate__animated fadeinup__scroll">
+            <img class="voice__img" src="images/voice_icon03.png" alt="">
+            <p class="voice__name">T.Nさん 会社員</p>
+            <p class="voice__text">サラリーマンで会社に依存するのが嫌で、プログラミング学習を始めました。<br>最初は不安でしたが手厚いサポートのおかげで案件獲得までいけました！
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- 一般社団法人MF様へ授業を提供 -->
+    <section class="offer">
+      <div class="container">
+        <h2 class="section-title text-underline animate__animated fadeinup__scroll">
+          <span class="text-underline__inner">一般社団法人MF様へ</span><br class="br-sp681"><span>授業を提供</span>
+        </h2>
+
+        <div class="offer__inner animate__animated fadeinup__scroll">
+          <div class="offer__top">
+            <div class="offer__vision">
+              <div class="offer__logo-outer">
+                <img class="offer__logo" src="images/svg/more_freely.svg" alt="一般社団法人MFのビジョン More Freelyのロゴ画像"
+                  width="77" height="77">
+              </div>
+              <div class="offer__catch-copy bold">もっと自由な学びへ<br>もっと自由な生活へ<br>もっと自由な社会へ</div>
+            </div>
+
+            <p class="offer__text">
+              一般社団法人MFとは上記のビジョンに掲げ、不登校の子供達に授業を提供、女性が安心して働ける場所の紹介や障がい者と健常者が活躍し地域に根付いたコミュニティー形成等を行っている団体です。<br>今回、そんなMF様にA-TECHのプログラミング授業を提供させていただくことになりました。<br>弊社の強みである、プログラミング教育を不登校の子供達に提供することで、少しでも彼ら彼女らの将来の助けになれば良いなと思いました。<br>今後とも、プログラミング教育をたくさんの人に広めることに努めてまいります。
+            </p>
+          </div>
+
+          <div class="offer__bottom">
+            <img class="offer__img" src="images/corporation_img.jpg" alt="">
+            <a class="button offer__button" href="#">公式サイトはこちら</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- お問い合わせ -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title__outer animate__animated fadeinup__scroll">
+          <h2 class="section-title text-underline">
+            <span class="text-underline__inner">お問い合わせ</span>
+          </h2>
+          <p class="contact__attention">お気軽にお問い合わせください。</p>
+        </div>
+
+
+        <!-- <div class="contact__inner"> -->
+
+
+        <form class="contact__form animate__animated fadeinup__scroll" action="#">
+
+          <div class="contact__form-item">
+            <label class="contact__form-label bold" for="name-kanji">氏名（漢字）</label>
+            <input class="contact__form-box" id="name-kanji" type="text" name="your-name">
+          </div>
+
+          <div class="contact__form-item">
+            <label class="contact__form-label bold" for="name-ruby">氏名（カナ）</label>
+            <input class="contact__form-box" id="name-ruby" type="text" name="your-name-ruby"
+              pattern="(?=.*?[\u30A1-\u30FC])[\u30A1-\u30FC\s]*">
+          </div>
+
+          <div class="contact__form-item">
+            <label class="contact__form-label bold" for="mail">メールアドレス</label>
+            <input class="contact__form-box" id="mail" type="email" name="your-mail">
+          </div>
+
+          <div class="contact__form-item">
+            <label class="contact__form-label bold" for="tel">電話番号</label>
+            <input class="contact__form-box" id="tel" type="tel" name="your-tel">
+          </div>
+
+          <div class="contact__form-item">
+            <label class="contact__form-label bold" for="inquiry">お問合せ内容</label>
+            <textarea class="contact__form-box" id="inquiry" name="your-inquiry"></textarea>
+          </div>
+
+          <div class="contact__form-button">
+            <button class="button contact__form-button-submit" type="submit">確認</button>
+          </div>
+        </form>
+      </div>
+
+    </section>
+  </main>
+
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer__inner">
+
+        <div class="footer-logo-outer">
+          <img class="footer__logo" src="images/svg/logo.svg" alt="A-TECH PROGRAMMING">
+        </div>
+
+        <div class="footer__privacy-policy">
+          <a class="footer__privacy-policy-link" href="#">プライバシーポリシー</a>
+        </div>
+
+        <div class="footer__sgate-link">
+          <a class="footer__sgate-link-button" href="#"><img class="footer__sgate-link-img" src="images/S-GATE.png"
+              alt="S-GATE"></a>
+        </div>
+
+      </div>
+
+      <small class="footer__copyright">2022 &copy; A-TECH.</small>
+    </div>
+  </footer>
+
+
+
+
+  <!-- Waypoints JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
+    integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- main.js -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,286 @@
+/* support
+------------------------------------------ */
+@use '../setting' as s;
+
+.support {
+  background-color: s.$paleblue;
+
+  .section-title__outer {
+    text-align: center;
+  }
+
+  .section-title {
+    position: relative;
+    display: inline-block; //widthを指定する必要がなくなる
+
+    //アンダーライン前の余白指定
+    .text-underline__inner {
+      margin-left: .5rem;
+    }
+
+    &__add {
+      position: absolute; //.support .section-titleを基準
+      bottom: 2.5rem; //40px
+      right: -6vw;
+      display: block;
+      font-size: 1rem;
+      background-color: s.$white;
+      border: .25rem solid s.$lightblue-main;
+      border-radius: 1rem;
+      padding: .75rem .5rem;
+
+      @media (min-width: 681px) {
+        bottom: 0;
+        right: calc(-8.75rem - 4vw); //固定値と可変値を併用すると、ブラウザ幅を広げても動きすぎることはなくなる
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+
+
+    @media (min-width: 468px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: 2rem;
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.25rem;
+    z-index: 0;
+
+    @media (min-width: 468px) {
+      width: calc((100% - 2rem) / 2);
+    }
+
+    @media (min-width: 715px) {
+      width: calc((100% - 2rem * 2) / 3);
+    }
+
+    .list-item__img-outer {
+      position: relative;
+      text-align: center;
+    }
+
+    .list-item__number {
+      position: absolute; //.list-item__img-outerを基準
+      top: -1.5rem;
+      left: 50%;
+      translate: -50%; //値が1つの場合はx軸の移動。要素の半分の長さ左に移動して中央に配置
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 3rem;
+      height: 3rem;
+      color: s.$white;
+      background-color: s.$lightblue-main;
+      border-radius: 50%;
+    }
+
+    .list-item__img {
+      border: .187rem solid s.$lightblue-main;
+      border-radius: 50%;
+      padding: .5rem;
+    }
+
+    .list-item__title {
+      color: s.$lightblue-main;
+    }
+  }
+
+  .support__box {
+    background-color: s.$white;
+    border-radius: 3rem;
+    padding: 2rem 1rem;
+    margin-top: 2.5rem;
+
+    //ブレイクポイント710px
+    @media (min-width: 710px) {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+
+    .box-title {
+      color: s.$lightblue-main;
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    .box-inner {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+      margin-top: 1.75rem;
+
+      @media (min-width: 710px) {
+        flex-direction: row;
+        column-gap: 2rem;
+      }
+
+      .comment {
+        color: s.$white;
+        background-color: s.$lightblue-main;
+        border-radius: 2rem;
+        padding: 2rem;
+
+        &:nth-child(1) {
+          @media (min-width: 710px) {
+            flex: 1;
+          }
+        }
+
+        &:nth-child(2) {
+          @media (min-width: 710px) {
+            flex: 1;
+          }
+        }
+
+        &__title {
+          text-align: center;
+          border-bottom: .125rem solid s.$white;
+          padding-bottom: .5rem;
+        }
+
+        &__text {
+          padding-top: .5rem;
+        }
+      }
+    }
+  }
+}
+
+//フェードインアニメーションの開始時間遅延
+.support {
+  &__list-item {
+
+    &:nth-child(2),
+    &:nth-child(5) {
+      @media (min-width: 768px) {
+        animation-delay: 300ms;
+      }
+    }
+
+    &:nth-child(3),
+    &:nth-child(6) {
+      @media (min-width: 768px) {
+        animation-delay: 600ms;
+      }
+    }
+  }
+}
+
+//回転する三角形 配置
+.support {
+  position: relative;
+
+  .triangle-animation {
+    &__p3-1 {
+      position: absolute;
+      top: -1.5rem; //-24px
+      right: 6%;
+      z-index: 0;
+
+      //ブレイクポイント681px
+      @media (min-width: 1025px) {
+        top: 62.5rem; //1000px
+        right: 2%;
+      }
+    }
+
+    &__p3-2 {
+      position: absolute;
+      top: 1.625rem; //26px
+      right: 3%;
+      z-index: 0;
+
+      @media (min-width: 1025px) {
+        top: 67rem; //1072px
+        right: 1%;
+      }
+    }
+
+    &__p3-3 {
+      position: absolute;
+      top: 4.75rem; //76px
+      right: 12%;
+      z-index: 0;
+
+      @media (min-width: 1025px) {
+        top: 70.5rem; //1128px
+        right: 5%;
+      }
+    }
+  }
+
+  .triangle-animation {
+    &__p5-1 {
+      position: absolute;
+      top: 61.25rem; //980px
+      left: 20%;
+      z-index: 0; //.list__itemとの重なり指定
+
+      @media (min-width: 1025px) {
+        top: 3rem;
+        left: 8%;
+      }
+    }
+
+    &__p5-2 {
+      position: absolute;
+      top: 64rem; //1024px
+      left: 3%;
+      z-index: 0; //.list__itemとの重なり指定
+
+      @media (min-width: 1025px) {
+        top: 5.625rem; //90px
+        left: 2%;
+      }
+    }
+
+    &__p5-3 {
+      position: absolute;
+      top: 66.25rem; //1060px
+      left: 14%;
+      z-index: 0; //.list__itemとの重なり指定
+      width: 16%;
+      max-width: 4rem;
+
+
+      @media (min-width: 1025px) {
+        top: 8.125rem; //130px
+        left: 4%;
+      }
+    }
+
+    &__p6-1 {
+      position: absolute;
+      top: 75.5rem; //1208px
+      left: 0;
+      z-index: 0; //.list__itemとの重なり指定
+
+      @media (min-width: 1025px) {
+        top: 17.5rem; //280px
+      }
+    }
+
+    &__p6-2 {
+      position: absolute;
+      top: 79.125rem; //1266px
+      left: 5%;
+      z-index: 0; //.list__itemとの重なり指定
+
+      @media (min-width: 1025px) {
+        top: 21.25rem; //340px
+        left: 2%;
+      }
+    }
+  }
+}
